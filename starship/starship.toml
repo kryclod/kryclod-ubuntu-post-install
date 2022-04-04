@@ -1,0 +1,82 @@
+# new blank line between shell prompts
+# add_newline=true
+
+# replace "❯" with "➜"
+[character]
+success_symbol= "[main](bold red) [➜](bold red)"
+
+# directory settings
+[directory]
+truncation_length= 3
+truncate_to_repo= false
+truncation_symbol="~/../"
+format="[$path](purple bold)[$read_only]($read_only_style) "
+
+# battery settings
+[battery]
+full_symbol= "  "
+charging_symbol = "⚡️ "
+discharging_symbol = "ﮊ "
+
+# time settings
+[time]
+disabled= false
+style= "red bold"
+format='🕙[\[ $time \]]($style) '
+time_format = "%T"
+use_12hr=true
+utc_time_offset = "-5"
+time_range = "10:00:00-14:00:00"
+
+# username custom structure
+[username]
+style_user = "red bold"
+style_root = "red bold"
+format = "[ $user](yellow bold) [](bold purple) "
+
+disabled = false
+show_always = true
+
+# git stuff
+[git_commit]
+commit_hash_length = 10
+tag_symbol = "🔖 "
+
+[git_branch]
+symbol = "🌱 "
+format="[$symbol$branch]($style) "
+truncation_length = 10
+truncation_symbol = ""
+style= "bold red"
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = "[🍒 PICKING](bold red)"
+
+[git_metrics]
+added_style = "bold blue"
+format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
+
+# python config
+[python]
+format='[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )](bold green)'
+
+# php config
+[php]
+format="[$symbol($version)]($style)"
+
+# nodejs config
+[nodejs]
+format="[$symbol($version )]($style)"
+
+# go config
+[golang]
+format="[$symbol($version )]($style)"
+
+#deno config
+[deno]
+format = "[🦕 $version](green bold) "
+
+#dart config
+[dart]
+format="[$symbol($version )]($style)"
