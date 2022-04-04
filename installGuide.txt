@@ -1,6 +1,0 @@
-# Tools
-- git
-- wget
-
-# Development
-- neovim
