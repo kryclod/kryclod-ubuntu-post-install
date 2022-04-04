@@ -4,8 +4,11 @@ sudo apt-get update && sudo apt-get update dist-upgrade
 sudo locale-gen es_AR.UTF-8
 
 # --------------------------------------------------// tools section //--------------------------------------------- #
+# bashtop
+sudo add-apt-repository ppa:bashtop-monitor/bashtop
+sudo apt update -y && sudo apt install bashtop -y
 # must-have tools
-sudo apt-get install net-tools wget curl software-properties-common apt-transport-https hwinfo aptitude build-essential hddtemp lm-sensors nvme-cli -y
+sudo python3-pip apt-get install net-tools wget curl software-properties-common apt-transport-https hwinfo aptitude build-essential hddtemp lm-sensors nvme-cli -y
 # git
 sudo apt install wget git -y
 # sound
@@ -30,7 +33,8 @@ sudo apt install tty-clock -y
 sudo apt install ubuntu-restricted-extras -y
 # work with files
 sudo apt install rar unrar p7zip-full p7zip-rar -y
-
+# tldr
+sudo npm install -g tdlr
 # --------------------------------------------------// software //----------------------------------------------- #
 cd ~/Downloads
 # zoom
@@ -56,6 +60,14 @@ cp -r ~/kryclod-ubuntu-post-install/ulauncher/WhiteSur-Dark-ulauncher/ ~/.config
 wget https://github.com/marktext/marktext/releases/download/v0.17.1/marktext-amd64.deb
 sudo apt install ./marktext-amd64.deb
 # --------------------------------------------------// development //--------------------------------------------- #
+# lsd
+cd ~/Downloads/
+wget https://github.com/Peltoche/lsd/releases/download/0.21.0/lsd-musl_0.21.0_amd64.deb
+sudo apt install ./lsd-musl_0.21.0_amd64.deb -y
+# bat
+sudo apt install bat -y
+# fd
+sudo apt install fd-find -y
 # alacritty
 sudo add-apt-repository ppa:aslatter/ppa -y; sudo apt update -y && sudo apt install alacritty -y
 # nodejs v16
